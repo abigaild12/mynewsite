@@ -8,6 +8,7 @@
 	{
 		url:'http://np-ec2-nytimes-com.s3.amazonaws.com/dev/test/nyregion.js',
 		jsonp : 'callback',
+		jsonpCallback: 'NYTD',
 		dataType:'jsonp',
 		crossDomain: true,
 		success:function(data) {
