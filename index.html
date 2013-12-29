@@ -7,24 +7,22 @@
 			<style type="text/css" media="screen"></style>
 	</head>
 <body>
-        <ul id = 'content'></ul>
+ <ul id = 'content'></ul>
         <script type="text/javascript">
-
         	var NYTD = {
         	render_section_front: function(data) {
-            // data is the JSON object itself
-            var copy = '';
-            var count = data.page.content[1].collections.length
-            for(var i = 0; i < count; i++){
-            	var assets = data.page.content[1].collections[i].assets
-                if(assets.length > 0)
-                for(var j = 0; j < assets.length; j++)
-                	var items = data.page.content[1].collections[i].assets[j]
-                	for(var prop in items)
-				copy += '<li id="' + prop + '">' + items[prop] + '</li>'
-			}    
-	    	document.getElementById('content').innerHTML = copy;
-	    	}};
+	            var copy = '';
+	            var count = data.page.content[1].collections.length
+		            for(var i = 0; i < count; i++){
+		            	var assets = data.page.content[1].collections[i].assets
+		                if(assets.length > 0)
+		                	for(var j = 0; j < assets.length; j++)
+		                	var items = data.page.content[1].collections[i].assets[j]
+		                		for(var prop in items)
+								copy += '<li id="' + prop + '">' + items[prop] + '</li>'
+							}    
+				    	document.getElementById('content').innerHTML = copy;
+				    	}};
 
 	    	var items = {
 	                "id": 100000002263690,
