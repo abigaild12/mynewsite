@@ -9,6 +9,7 @@
 <body>
         <ul id = 'content'></ul>
         <script type="text/javascript">
+
         	var NYTD = {
         	render_section_front: function(data) {
             // data is the JSON object itself
@@ -18,11 +19,31 @@
             	var assets = data.page.content[1].collections[i].assets
                 if(assets.length > 0)
                 for(var j = 0; j < assets.length; j++)
-                for(var prop in data.page.content[1].collections[i].assets[j])
-				copy += '<li id="' + prop + '">' + data.page.content[1].collections[i].assets[j][prop] + '</li>'
+                	var items = data.page.content[1].collections[i].assets[j]
+                	for(var prop in items)
+				copy += '<li id="' + prop + '">' + items[prop] + '</li>'
 			}    
-	    document.getElementById('content').innerHTML = copy;
-	    }};
+	    	document.getElementById('content').innerHTML = copy;
+	    	}};
+
+	    	var items = {
+	                "id": 100000002263690,
+	                "type": "Article",
+	                "typeOfMaterial": "News",
+	                "lastPublished": "2013-06-05T09:48:50.050.EDT",
+	                "lastFileGenerated": "2013-06-05T11:37:45.045.EDT",
+	                "showTimestamp": true,
+	                "headline": "Political Leaders Gather to Pay Tribute to Lautenberg",
+	                "original_headline": "Political Leaders Gather to Pay Tribute to Lautenberg",
+	                "byline": "By MARC SANTORA",
+	                "url": "http://www.nytimes.com/2013/06/06/nyregion/dignitaries-gather-to-honor-frank-lautenberg.html",
+				    "summary": "A host of dignitaries will eulogize Frank R. Lautenberg, a five-term United States senator, at a funeral service Wednesday in Manhattan.",
+				    "original_summary": "A host of dignitaries will eulogize Frank R. Lautenberg, a five-term United States senator, at a funeral service Wednesday in Manhattan.",
+				    "images": "",
+				    "publicationDt": "2013-06-06T00:00:00.000.EDT"
+				};
+			NYTD.render_section_front(items);
+
         </script>
         <script type="text/javascript" src="http://np-ec2-nytimes-com.s3.amazonaws.com/dev/test/nyregion.js"></script>
     </body>
