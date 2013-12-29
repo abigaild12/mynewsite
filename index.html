@@ -15,14 +15,14 @@
 	            var count = data.page.content[1].collections.length
 		            for(var i = 0; i < count; i++){
 		            	var assets = data.page.content[1].collections[i].assets
-		                if(assets.length > 0)
-		                	for(var j = 0; j < assets.length; j++)
-		                	var items = data.page.content[1].collections[i].assets[j]
-		                		for(var prop in items)
-								copy += '<li id="' + prop + '">' + items[prop] + '</li>'
-							}    
-				    	document.getElementById('content').innerHTML = copy;
-				    	}};
+		                		if(assets.length > 0)
+		                			for(var j = 0; j < assets.length; j++)
+		                			var items = data.page.content[1].collections[i].assets[j]
+		                				for(var prop in items)
+										copy += '<li id="' + prop + '">' + items[prop] + '</li>'
+									}    
+						    	document.getElementById('content').innerHTML = copy;
+						    	}};
 
 	    	var items = {
 	                "id": 100000002263690,
