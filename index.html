@@ -1,38 +1,30 @@
-<!doctype html>
-<!--[if lt IE 7]><html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js"><!--<![endif]-->
-	<head>
-			<meta charset="UTF-8">
-				<!-- Google Chrome Frame for IE -->
-				<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-				<meta http-equiv="Access-Control-Allow-Origin" content="*">
 
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js">
+	<head>
+		<meta charset="UTF-8">
 			<title>New Site:Timesian</title>
 			<link rel="icon" href="http://css.nyt.com/images/icons/nyt.ico" />
 			<style type="text/css" media="screen"></style>
-			<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-			</script>-->
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-			<script type="text/javascript" src="http://127.0.0.1/js/callback.js"></script>
 	</head>
-
 <body>
-	<div id="container">
-	
-		<div id="content">
-
-			<div id="main" class="clearfix" role="main">
-
-				<h1>TIMESIAN</h1>	
-				<div id="nytimes-main-role"></div>
-
-				</div>
-
-			</div>
-
-		</div>		
-</body>
-
+        <ul id = 'content'></ul>
+        <script type="text/javascript">
+        	var NYTD = {
+        	render_section_front: function(data) {
+            // data is the JSON object itself
+            var copy = '';
+            var count = data.page.content[1].collections.length
+            for(var i = 0; i < count; i++){
+            	var assets = data.page.content[1].collections[i].assets
+                if(assets.length > 0)
+                for(var j = 0; j < assets.length; j++)
+                for(var prop in data.page.content[1].collections[i].assets[j])
+				copy += '<li id="' + prop + '">' + data.page.content[1].collections[i].assets[j][prop] + '</li>'
+			}    
+	    document.getElementById('content').innerHTML = copy;
+	    }};
+        </script>
+        <script type="text/javascript" src="http://np-ec2-nytimes-com.s3.amazonaws.com/dev/test/nyregion.js"></script>
+    </body>
 </html>
+ 
