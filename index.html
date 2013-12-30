@@ -4,46 +4,37 @@
 		<meta charset="UTF-8">
 			<title>New Site:Timesian</title>
 			<link rel="icon" href="http://css.nyt.com/images/icons/nyt.ico" />
-			<style type="text/css" media="screen"></style>
+			<link rel="stylesheet" href="http://newhost.site/css/style.css" type="text/css" media="all">
 	</head>
 <body>
- <ul id = 'content'></ul>
-        <script type="text/javascript">
-        	var NYTD = {
-        	render_section_front: function(data) {
-	            var copy = '';
-	            var count = data.page.content[1].collections.length
-		            for(var i = 0; i < count; i++){
-		            	var assets = data.page.content[1].collections[i].assets
-	                		if(assets.length > 0)
-	                			for(var j = 0; j < assets.length; j++)
-	                			var items = data.page.content[1].collections[i].assets[j]
-	                				for(var prop in items)
-									copy += '<li id="' + prop + '">' + items[prop] + '</li>'
-								}    
-					    	document.getElementById('content').innerHTML = copy;
-					    	}};
+	<div id="container">
 
-	    	var items = {
-	                "id": 100000002263690,
-	                "type": "Article",
-	                "typeOfMaterial": "News",
-	                "lastPublished": "2013-06-05T09:48:50.050.EDT",
-	                "lastFileGenerated": "2013-06-05T11:37:45.045.EDT",
-	                "showTimestamp": true,
-	                "headline": "Political Leaders Gather to Pay Tribute to Lautenberg",
-	                "original_headline": "Political Leaders Gather to Pay Tribute to Lautenberg",
-	                "byline": "By MARC SANTORA",
-	                "url": "http://www.nytimes.com/2013/06/06/nyregion/dignitaries-gather-to-honor-frank-lautenberg.html",
-				    "summary": "A host of dignitaries will eulogize Frank R. Lautenberg, a five-term United States senator, at a funeral service Wednesday in Manhattan.",
-				    "original_summary": "A host of dignitaries will eulogize Frank R. Lautenberg, a five-term United States senator, at a funeral service Wednesday in Manhattan.",
-				    "images": "",
-				    "publicationDt": "2013-06-06T00:00:00.000.EDT"
-				};
-			NYTD.render_section_front(items);
+		<div id="content">
+			 <header class="header">
 
-        </script>
-        <script type="text/javascript" src="http://np-ec2-nytimes-com.s3.amazonaws.com/dev/test/nyregion.js"></script>
+			 	</header>
+
+		 			<div id="inner-content">
+					<ul id = 'news-articles'></ul>
+			        <script type="text/javascript">
+			        	var NYTD = {
+			        	render_section_front: function(data) {
+				            var copy = '';
+				            var count = data.page.content[1].collections.length
+					            for(var i = 0; i < count; i++){
+					            	var assets = data.page.content[1].collections[i].assets
+				                		if(assets.length > 0)
+				                			for(var j = 0; j < assets.length; j++)
+				                			var items = assets[j] 
+				                			copy += '<li id="nytd' + items.id + '">' + '<h1>' + items.headline + '</h1>' + '<a>'+ items.images + '</a>' + '<p>' +items.byline + '</p>' + '<p>' + items.publicationDt + '</p>' + '<p>' + items.summary + '</p>' + '<p>' + items.url + '</p>' + '</li>'
+				                		}	
+								    	document.getElementById('news-articles').innerHTML = copy;
+								    	}};
+			        </script>
+        		<script type="text/javascript" src="http://np-ec2-nytimes-com.s3.amazonaws.com/dev/test/nyregion.js"></script>
+        		</div>
+        	</div>
+    	</div>
     </body>
 </html>
  

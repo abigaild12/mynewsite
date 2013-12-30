@@ -1,0 +1,34 @@
+@import "_mixins.less";
+/******************************************************************
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+#container {
+	width: 100%;
+
+	#content {
+		margin: auto;
+		width: 972px;
+		border: 1px solid @gray;
+
+		.header,
+		.footer {}
+
+		.header {}
+
+		.footer {}
+
+			#inner-content {
+				#summer {background-image: url(../img/layout/blocks/summer.jpg);}
+				#winter {background-image: url(../img/layout/blocks/winter.jpg);}
+
+				
+		}
+	}	
+}		
