@@ -16,23 +16,25 @@
 
 		 			<div id="inner-content">
 					<ul id = 'news-articles'></ul>
-			        <script type="text/javascript">
-			        	var NYTD = {
-			        	render_section_front: function(data) {
-				            var copy = '';
-				            var count = data.page.content[1].collections.length
-					            for(var i = 0; i < count; i++){
-					            	var assets = data.page.content[1].collections[i].assets
-				                		if(assets.length > 0)
-				                			for(var j = 0; j < assets.length; j++)
-				                			var items = assets[j] 
-				                			copy += '<li id="nytd' + items.id + '">' + '<h1>' + items.headline + '</h1>' + '<a>'+ items.images + '</a>' + '<p>' +items.byline + '</p>' + '<p>' + items.publicationDt + '</p>' + '<p>' + items.summary + '</p>' + '<p>' + items.url + '</p>' + '</li>'
-				                		}	
-								    	document.getElementById('news-articles').innerHTML = copy;
-								    	}};
-			        </script>
-        		<script type="text/javascript" src="http://np-ec2-nytimes-com.s3.amazonaws.com/dev/test/nyregion.js"></script>
-        		</div>
+				        <script type="text/javascript">
+				        	var NYTD = {
+				        	render_section_front: function(data) {
+					            var copy = '';
+					            var count = data.page.content[1].collections.length
+						            for(var i = 0; i < count; i++){
+						            	var assets = data.page.content[1].collections[i].assets
+					                		if(assets.length > 0)
+					                			for(var j = 0; j < assets.length; j++)
+					                			var items = assets[j] 
+					                			copy += '<li id="nytd' + items.id + '">' + '<h1>' + items.headline + '</h1>' + '<a>'+ items.images + '</a>' + '<p>' +items.byline + '</p>' + '<p>' + items.publicationDt + '</p>' + '<p>' + items.summary + '</p>' + '<p>' + items.url + '</p>' + '</li>'
+					                		}	
+									    	document.getElementById('news-articles').innerHTML = copy;
+									    	}};
+				        </script>
+	        		    <script type="text/javascript" src="http://np-ec2-nytimes-com.s3.amazonaws.com/dev/test/nyregion.js"></script>
+        			</div>
+        		<footer class="footer">
+        		</footer>
         	</div>
     	</div>
     </body>

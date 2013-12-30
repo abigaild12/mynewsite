@@ -118,11 +118,21 @@ and will be used across all viewports.
 #container #content {
   margin: auto;
   width: 972px;
+  margin-top: 14px;
+}
+#container #content .header {
+  display: block;
+  background-image: url(../images/NYTD-banner.jpg);
+  background-size: auto;
+  height: 120px;
+  width: 972px;
+}
+#container #content #inner-content {
+  margin: auto;
+  width: 972px;
   border: 1px solid #999999;
 }
-#container #content #inner-content #summer {
-  background-image: url(../img/layout/blocks/summer.jpg);
-}
-#container #content #inner-content #winter {
-  background-image: url(../img/layout/blocks/winter.jpg);
+#container #content #inner-content #news-articles ul li #nytd100000002105691,
+#container #content #inner-content #news-articles #nytd100000002105691 {
+  display: none;
 }

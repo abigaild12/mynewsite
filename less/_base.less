@@ -15,20 +15,33 @@ and will be used across all viewports.
 	#content {
 		margin: auto;
 		width: 972px;
-		border: 1px solid @gray;
+		margin-top: 14px;
 
 		.header,
 		.footer {}
 
-		.header {}
+		.header {
+			display: block;
+			background-image: url(../images/NYTD-banner.jpg);
+			background-size: auto;
+			height: 120px;
+			width: 972px;
+		}
 
 		.footer {}
 
 			#inner-content {
-				#summer {background-image: url(../img/layout/blocks/summer.jpg);}
-				#winter {background-image: url(../img/layout/blocks/winter.jpg);}
+				margin: auto;
+				width: 972px;
+				border: 1px solid @gray;
 
-				
-		}
-	}	
-}		
+				#news-articles {
+
+					ul li #nytd100000002105691,
+						  #nytd100000002105691 {
+						  	display:none;
+						}
+					}
+				}
+			}	
+		}		
