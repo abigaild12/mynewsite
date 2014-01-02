@@ -23,7 +23,7 @@ and will be used across all viewports.
 		.header {
 			display: block;
 			background-image: url(../images/NYTD-banner.jpg);
-			background-size: auto;
+			background-repeat:no-repeat;
 			height: 120px;
 			width: 972px;
 		}
@@ -31,17 +31,112 @@ and will be used across all viewports.
 		.footer {}
 
 			#inner-content {
+
+				font-family: georgia, "times new roman", times, serif;
 				margin: auto;
 				width: 972px;
 				border: 1px solid @gray;
 
-				#news-articles {
+					#news-articles {
+						width: 406px;
+						list-style-type: none;
+						padding: 0px;
+						margin-top: 18px;
+						margin-bottom: 0px;
 
-					ul li #nytd100000002105691,
-						  #nytd100000002105691 {
-						  	display:none;
+							li:nth-child(8),
+							li:last-child {
+								display:none;
+							}
+
+							> li:first-child { 
+								margin-bottom: 8px;
+								margin-left: 10px;
+
+									a {
+									font-family: georgia, "times new roman", times, serif;
+									font-size: 20px;
+									font-weight: bold;
+									line-height: 23px;
+									color: #004276;
+									text-decoration: none;
+
+										a:visited,
+										&:hover {							
+											text-decoration: underline;
+											}
+									    }
+
+									span {
+									display: block;
+									background-image: url(../images/lautenberg.jpg);
+									background-repeat:no-repeat;
+									height: 264px;
+									width: 395px;
+									margin-bottom: 4px;
+								    }
+
+								    p {
+									.timesian(@sans-serif, 10px, @timesiangray, none);
+									margin-top: 2px;
+									margin-bottom: 8px;
+									}
+
+									p:nth-child(4){
+									.timesian(@sans-serif, 9px, #909090 , none);
+									margin-left: 258px;
+									margin-top: 0px;
+									margin-bottom: 3px;	
+								    }
+
+								    p:nth-child(5){
+									.timesian(@sans-serif, 11px, #666, none);
+									margin: 0px;	
+									}
+
+									p:nth-child(6){
+									.font(@serif, 14px, @black, none);
+									line-height: 1.2em;
+									margin-top: 6px;
+									}
+								}    
+
+							>   li:not(:first-child) {
+								margin-bottom: 8px;
+								margin-left: 10px;
+
+									> a {
+										font-family: georgia, "times new roman", times, serif;
+										font-size: 15px;
+										font-weight: bold;
+										color: #004276;
+										text-decoration: none;
+
+										a:visited,
+										&:hover {							
+											text-decoration: underline;
+										}
+								    }
+
+								    p:nth-child(2) {
+									.timesian(@sans-serif, 10px, @timesiangray, none);
+									margin-top: 0px;
+									margin-bottom: 0px;
+									}
+
+									p:nth-child(4),
+									p:nth-child(5) {
+									display: none;	
+									}
+
+									p:nth-child(6){
+									.font(@serif, 14px, @black, none);
+									line-height: 1.2em;
+									margin-top: 0px;
+									margin-bottom: 0px;
+									}
+								}	
+							}	
 						}
 					}
-				}
-			}	
-		}		
+				}				

@@ -26,7 +26,7 @@
 					                		if(assets.length > 0)
 					                			for(var j = 0; j < assets.length; j++)
 					                			var items = assets[j] 
-					                			copy += '<li id="nytd' + items.id + '">' + '<h1>' + items.headline + '</h1>' + '<a>'+ items.images + '</a>' + '<p>' +items.byline + '</p>' + '<p>' + items.publicationDt + '</p>' + '<p>' + items.summary + '</p>' + '<p>' + items.url + '</p>' + '</li>'
+					                			copy += '<li>' + '<a href="' + items.url + '">' + items.headline + '</h1>'+ '</a>' + '<p>' +items.byline + '</p>' + '<span>' + '</span>' + '<p>Todd Heisler/The New York Times' + '</p>' + '<p>The coffin bearing Senator Frank R. Lautenberg arrived on Wednesday morning at&nbsp; the Park Avenue Synagogue. Mr. Lautenberg died&nbsp; Monday at age 89.' + '</p>'+ '<p>' + items.summary + '</p>' + '</li>'
 					                		}	
 									    	document.getElementById('news-articles').innerHTML = copy;
 									    	}};

@@ -53,6 +53,7 @@ http://0to255.com/
 @black:             #000;
 @white:             #fff;
 @gray:				#999;
+@timesiangray:		#808080;
 
 @link-color:        @alert-blue;
 @link-hover:        darken(@link-color, 9%);
@@ -67,10 +68,22 @@ http://sachagreif.com/sass-color-variables/
 TYPOGRAPHY
 *********************/
 
-@sans-serif:         "Helvetica Neue", Helvetica, Arial, sans-serif; 
-@serif:              "Georgia", Cambria, Times New Roman, Times, serif; 
-@cant:               "Cantarell", @sans-serif;
-@oswald:             "Oswald", @sans-serif;
+@sans-serif:         "Arial", Helvetica, sans-serif; 
+@serif:              "Georgia", Times New Roman, Times, serif; 
+
+.timesian(@family: @sans-serif, @size: 10px, @color: @timesiangray, @transform: none) {
+	font-size: @size;
+	font-family: @family, @sans-serif;
+	text-transform: @transform;
+	color: @color;
+	}
+
+.font(@family: @serif, @size: 14px, @color: @black, @transform: none) {
+	font-size: @size;
+	font-family: @family, @serif;
+	text-transform: @transform;
+	color: @color;
+	}
 
 /* 	To embed your own fonts, use this syntax
 	and place your fonts inside the 
