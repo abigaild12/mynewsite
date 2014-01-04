@@ -228,8 +228,8 @@ and will be used across all viewports.
   font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
   text-transform: none;
   color: #808080;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(4),
 #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(5) {
@@ -243,6 +243,238 @@ and will be used across all viewports.
   line-height: 1.2em;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+/*
+IPhone MOBILE DEVICES
+This is for Iphone devices.
+*/
+@media only screen and (min-width: 320px) {
+  /******************************************************************
+  Stylesheet: Mixins & Constants Stylesheet
+  
+  This is where you can take advantage of LESS' great features: 
+  Mixins & Constants. I won't go in-depth on how they work exactly,
+  there are a few articles below that will help do that. What I will
+  tell you is that this will help speed up simple changes like
+  changing a color or adding CSS3 techniques like box shadow and
+  border-radius.
+  
+  A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+  remember less is more. 
+  
+  ******************************************************************/
+  /*********************
+  CLEARFIXIN'
+  *********************/
+  .clearfix {
+    zoom: 1;
+  }
+  .clearfix:before,
+  .clearfix:after {
+    content: "";
+    display: table;
+  }
+  .clearfix:after {
+    clear: both;
+  }
+  /*********************
+  TOOLS
+  *********************/
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .image-replacement {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  /*********************
+  COLORS
+  Need help w/ choosing your colors? Try this site out:
+  http://0to255.com/
+  *********************/
+  /*
+  Here's a great tutorial on how to
+  use color variables properly:
+  http://sachagreif.com/sass-color-variables/
+  */
+  /*********************
+  TYPOGRAPHY
+  *********************/
+  /* 	To embed your own fonts, use this syntax
+  	and place your fonts inside the 
+  	library/fonts folder. For more information
+  	on embedding fonts, go to:
+  	http://www.fontsquirrel.com/
+  	Be sure to remove the comment brackets.
+  */
+  /*	@font-face {
+      	font-family: 'Font Name';
+      	src: url('../fonts/font-name.eot');
+      	src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
+               url('../fonts/font-name.woff') format('woff'),
+               url('../fonts/font-name.ttf') format('truetype'),
+               url('../fonts/font-name.svg#font-name') format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+  	}
+  */
+  /* 
+  use the best ampersand 
+  http://simplebits.com/notebook/2008/08/14/ampersands-2/
+  */
+  span.amp {
+    font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+    font-style: italic;
+  }
+  /*********************
+  BORDER RADIUS
+  *********************/
+  /* 
+  NOTE: For older browser support (and some mobile), 
+  don't use the shorthand to define *different* corners. 
+  
+  USAGE: .border-radius(4px); 
+  
+  */
+  /*********************
+  TRANISTION
+  *********************/
+  /* .transition(all,2s); */
+  /*********************
+  CSS3 GRADIENTS
+  Be careful with these since they can 
+  really slow down your CSS. Don't overdo it.
+  *********************/
+  /* .css-gradient(#dfdfdf,#f8f8f8); */
+  /*********************
+  BOX SHADOW
+  *********************/
+  /* .boxShadow(0,0,4px,0,#444); */
+  /* .boxShadow(none); */
+  /******************************************************************
+  Stylesheet: 320px and Up Stylesheet
+  
+  This stylesheet is loaded Iphone devices.
+  ******************************************************************/#container {
+    width: 25.3%;
+  }
+  #container #content {
+    margin: auto;
+    width: 25.3%;
+    margin-top: 14px;
+  }
+  #container #content .header,
+  #container #content .footer {
+    display: none;
+  }
+  #container #content #inner-content {
+    font-family: georgia, "times new roman", times, serif;
+    margin: auto;
+    width: 0px;
+    border: none;
+  }
+  #container #content #inner-content #news-articles {
+    width: 406px;
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 18px;
+    margin-bottom: 0px;
+  }
+  #container #content #inner-content #news-articles li:nth-child(8),
+  #container #content #inner-content #news-articles li:last-child {
+    display: none;
+  }
+  #container #content #inner-content #news-articles > li:first-child {
+    margin-bottom: 8px;
+    margin-left: 10px;
+  }
+  #container #content #inner-content #news-articles > li:first-child a {
+    font-family: georgia, "times new roman", times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 23px;
+    color: #004276;
+    text-decoration: none;
+  }
+  #container #content #inner-content #news-articles > li:first-child a a:visited,
+  #container #content #inner-content #news-articles > li:first-child a:hover {
+    text-decoration: underline;
+  }
+  #container #content #inner-content #news-articles > li:first-child span {
+    display: none;
+    margin-bottom: 4px;
+  }
+  #container #content #inner-content #news-articles > li:first-child p {
+    font-size: 10px;
+    font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
+    text-transform: none;
+    color: #808080;
+    margin-top: 2px;
+    margin-bottom: 8px;
+  }
+  #container #content #inner-content #news-articles > li:first-child p:nth-child(4) {
+    font-size: 9px;
+    font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
+    text-transform: none;
+    color: #909090;
+    margin-left: 258px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+  }
+  #container #content #inner-content #news-articles > li:first-child p:nth-child(5) {
+    font-size: 11px;
+    font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
+    text-transform: none;
+    color: #666666;
+    margin: 0px;
+  }
+  #container #content #inner-content #news-articles > li:first-child p:nth-child(6) {
+    font-size: 14px;
+    font-family: "Georgia", Times New Roman, Times, serif, "Georgia", Times New Roman, Times, serif;
+    text-transform: none;
+    color: #000000;
+    line-height: 1.2em;
+    margin-top: 6px;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) {
+    margin-bottom: 8px;
+    margin-left: 10px;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) > a {
+    font-family: georgia, "times new roman", times, serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #004276;
+    text-decoration: none;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) > a a:visited,
+  #container #content #inner-content #news-articles > li:not(:first-child) > a:hover {
+    text-decoration: underline;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(2) {
+    font-size: 10px;
+    font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
+    text-transform: none;
+    color: #808080;
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(4),
+  #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(5) {
+    display: none;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(6) {
+    font-size: 14px;
+    font-family: "Georgia", Times New Roman, Times, serif, "Georgia", Times New Roman, Times, serif;
+    text-transform: none;
+    color: #000000;
+    line-height: 1.2em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 /*
 LARGER MOBILE DEVICES
@@ -273,6 +505,111 @@ you can add resource intensive styles.
 */
 @media only screen and (min-width: 768px) {
   /******************************************************************
+  Stylesheet: Mixins & Constants Stylesheet
+  
+  This is where you can take advantage of LESS' great features: 
+  Mixins & Constants. I won't go in-depth on how they work exactly,
+  there are a few articles below that will help do that. What I will
+  tell you is that this will help speed up simple changes like
+  changing a color or adding CSS3 techniques like box shadow and
+  border-radius.
+  
+  A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+  remember less is more. 
+  
+  ******************************************************************/
+  /*********************
+  CLEARFIXIN'
+  *********************/
+  .clearfix {
+    zoom: 1;
+  }
+  .clearfix:before,
+  .clearfix:after {
+    content: "";
+    display: table;
+  }
+  .clearfix:after {
+    clear: both;
+  }
+  /*********************
+  TOOLS
+  *********************/
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .image-replacement {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  /*********************
+  COLORS
+  Need help w/ choosing your colors? Try this site out:
+  http://0to255.com/
+  *********************/
+  /*
+  Here's a great tutorial on how to
+  use color variables properly:
+  http://sachagreif.com/sass-color-variables/
+  */
+  /*********************
+  TYPOGRAPHY
+  *********************/
+  /* 	To embed your own fonts, use this syntax
+  	and place your fonts inside the 
+  	library/fonts folder. For more information
+  	on embedding fonts, go to:
+  	http://www.fontsquirrel.com/
+  	Be sure to remove the comment brackets.
+  */
+  /*	@font-face {
+      	font-family: 'Font Name';
+      	src: url('../fonts/font-name.eot');
+      	src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
+               url('../fonts/font-name.woff') format('woff'),
+               url('../fonts/font-name.ttf') format('truetype'),
+               url('../fonts/font-name.svg#font-name') format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+  	}
+  */
+  /* 
+  use the best ampersand 
+  http://simplebits.com/notebook/2008/08/14/ampersands-2/
+  */
+  span.amp {
+    font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+    font-style: italic;
+  }
+  /*********************
+  BORDER RADIUS
+  *********************/
+  /* 
+  NOTE: For older browser support (and some mobile), 
+  don't use the shorthand to define *different* corners. 
+  
+  USAGE: .border-radius(4px); 
+  
+  */
+  /*********************
+  TRANISTION
+  *********************/
+  /* .transition(all,2s); */
+  /*********************
+  CSS3 GRADIENTS
+  Be careful with these since they can 
+  really slow down your CSS. Don't overdo it.
+  *********************/
+  /* .css-gradient(#dfdfdf,#f8f8f8); */
+  /*********************
+  BOX SHADOW
+  *********************/
+  /* .boxShadow(0,0,4px,0,#444); */
+  /* .boxShadow(none); */
+  /******************************************************************
   Stylesheet: Tablet & Small Desktop Stylesheet
   
   Here's where you can start getting into the good stuff.
@@ -282,6 +619,371 @@ you can add resource intensive styles.
   come into play. Have fun!
   
   ******************************************************************/
+  #container {
+    width: 62.9%%;
+  }
+  #container #content {
+    margin: auto;
+    width: 62.9%%;
+    margin-top: 14px;
+  }
+  #container #content .header,
+  #container #content .footer {
+    display: none;
+  }
+  #container #content #inner-content {
+    font-family: georgia, "times new roman", times, serif;
+    margin: auto;
+    width: 0px;
+    border: none;
+  }
+  #container #content #inner-content #news-articles {
+    width: 406px;
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 18px;
+    margin-bottom: 0px;
+  }
+  #container #content #inner-content #news-articles li:nth-child(8),
+  #container #content #inner-content #news-articles li:last-child {
+    display: none;
+  }
+  #container #content #inner-content #news-articles > li:first-child {
+    margin-bottom: 8px;
+    margin-left: 10px;
+  }
+  #container #content #inner-content #news-articles > li:first-child a {
+    font-family: georgia, "times new roman", times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 23px;
+    color: #004276;
+    text-decoration: none;
+  }
+  #container #content #inner-content #news-articles > li:first-child a a:visited,
+  #container #content #inner-content #news-articles > li:first-child a:hover {
+    text-decoration: underline;
+  }
+  #container #content #inner-content #news-articles > li:first-child span {
+    display: block;
+    background-image: url(../images/lautenberg.jpg);
+    background-repeat: no-repeat;
+    height: 264px;
+    width: 395px;
+    margin-bottom: 4px;
+  }
+  #container #content #inner-content #news-articles > li:first-child p {
+    font-size: 10px;
+    font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
+    text-transform: none;
+    color: #808080;
+    margin-top: 2px;
+    margin-bottom: 8px;
+  }
+  #container #content #inner-content #news-articles > li:first-child p:nth-child(4) {
+    font-size: 9px;
+    font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
+    text-transform: none;
+    color: #909090;
+    margin-left: 258px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+  }
+  #container #content #inner-content #news-articles > li:first-child p:nth-child(5) {
+    font-size: 11px;
+    font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
+    text-transform: none;
+    color: #666666;
+    margin: 0px;
+  }
+  #container #content #inner-content #news-articles > li:first-child p:nth-child(6) {
+    font-size: 14px;
+    font-family: "Georgia", Times New Roman, Times, serif, "Georgia", Times New Roman, Times, serif;
+    text-transform: none;
+    color: #000000;
+    line-height: 1.2em;
+    margin-top: 6px;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) {
+    margin-bottom: 8px;
+    margin-left: 10px;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) > a {
+    font-family: georgia, "times new roman", times, serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #004276;
+    text-decoration: none;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) > a a:visited,
+  #container #content #inner-content #news-articles > li:not(:first-child) > a:hover {
+    text-decoration: underline;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(2) {
+    font-size: 10px;
+    font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
+    text-transform: none;
+    color: #808080;
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(4),
+  #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(5) {
+    display: none;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(6) {
+    font-size: 14px;
+    font-family: "Georgia", Times New Roman, Times, serif, "Georgia", Times New Roman, Times, serif;
+    text-transform: none;
+    color: #000000;
+    line-height: 1.2em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+/*
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 960px) {
+  /******************************************************************
+  Stylesheet: Mixins & Constants Stylesheet
+  
+  This is where you can take advantage of LESS' great features: 
+  Mixins & Constants. I won't go in-depth on how they work exactly,
+  there are a few articles below that will help do that. What I will
+  tell you is that this will help speed up simple changes like
+  changing a color or adding CSS3 techniques like box shadow and
+  border-radius.
+  
+  A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+  remember less is more. 
+  
+  ******************************************************************/
+  /*********************
+  CLEARFIXIN'
+  *********************/
+  .clearfix {
+    zoom: 1;
+  }
+  .clearfix:before,
+  .clearfix:after {
+    content: "";
+    display: table;
+  }
+  .clearfix:after {
+    clear: both;
+  }
+  /*********************
+  TOOLS
+  *********************/
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .image-replacement {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  /*********************
+  COLORS
+  Need help w/ choosing your colors? Try this site out:
+  http://0to255.com/
+  *********************/
+  /*
+  Here's a great tutorial on how to
+  use color variables properly:
+  http://sachagreif.com/sass-color-variables/
+  */
+  /*********************
+  TYPOGRAPHY
+  *********************/
+  /* 	To embed your own fonts, use this syntax
+  	and place your fonts inside the 
+  	library/fonts folder. For more information
+  	on embedding fonts, go to:
+  	http://www.fontsquirrel.com/
+  	Be sure to remove the comment brackets.
+  */
+  /*	@font-face {
+      	font-family: 'Font Name';
+      	src: url('../fonts/font-name.eot');
+      	src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
+               url('../fonts/font-name.woff') format('woff'),
+               url('../fonts/font-name.ttf') format('truetype'),
+               url('../fonts/font-name.svg#font-name') format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+  	}
+  */
+  /* 
+  use the best ampersand 
+  http://simplebits.com/notebook/2008/08/14/ampersands-2/
+  */
+  span.amp {
+    font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+    font-style: italic;
+  }
+  /*********************
+  BORDER RADIUS
+  *********************/
+  /* 
+  NOTE: For older browser support (and some mobile), 
+  don't use the shorthand to define *different* corners. 
+  
+  USAGE: .border-radius(4px); 
+  
+  */
+  /*********************
+  TRANISTION
+  *********************/
+  /* .transition(all,2s); */
+  /*********************
+  CSS3 GRADIENTS
+  Be careful with these since they can 
+  really slow down your CSS. Don't overdo it.
+  *********************/
+  /* .css-gradient(#dfdfdf,#f8f8f8); */
+  /*********************
+  BOX SHADOW
+  *********************/
+  /* .boxShadow(0,0,4px,0,#444); */
+  /* .boxShadow(none); */
+  /******************************************************************
+  Stylesheet: 960 Desktop Stylsheet
+  
+  This is the desktop size. It's larger than an iPad so it will only
+  be seen on the Desktop. 
+  
+  ******************************************************************/
+  #container {
+    width: 100%;
+  }
+  #container #content {
+    margin: auto;
+    width: 972px;
+    margin-top: 14px;
+  }
+  #container #content .header {
+    display: block;
+    background-image: url(../images/NYTD-banner.jpg);
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 972px;
+  }
+  #container #content #inner-content {
+    font-family: georgia, "times new roman", times, serif;
+    margin: auto;
+    width: 972px;
+    border: 1px solid #999999;
+  }
+  #container #content #inner-content #news-articles {
+    width: 406px;
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 18px;
+    margin-bottom: 0px;
+  }
+  #container #content #inner-content #news-articles li:nth-child(8),
+  #container #content #inner-content #news-articles li:last-child {
+    display: none;
+  }
+  #container #content #inner-content #news-articles > li:first-child {
+    margin-bottom: 8px;
+    margin-left: 10px;
+  }
+  #container #content #inner-content #news-articles > li:first-child a {
+    font-family: georgia, "times new roman", times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 23px;
+    color: #004276;
+    text-decoration: none;
+  }
+  #container #content #inner-content #news-articles > li:first-child a a:visited,
+  #container #content #inner-content #news-articles > li:first-child a:hover {
+    text-decoration: underline;
+  }
+  #container #content #inner-content #news-articles > li:first-child span {
+    display: block;
+    background-image: url(../images/lautenberg.jpg);
+    background-repeat: no-repeat;
+    height: 264px;
+    width: 395px;
+    margin-bottom: 4px;
+  }
+  #container #content #inner-content #news-articles > li:first-child p {
+    font-size: 10px;
+    font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
+    text-transform: none;
+    color: #808080;
+    margin-top: 2px;
+    margin-bottom: 8px;
+  }
+  #container #content #inner-content #news-articles > li:first-child p:nth-child(4) {
+    font-size: 9px;
+    font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
+    text-transform: none;
+    color: #909090;
+    margin-left: 258px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+  }
+  #container #content #inner-content #news-articles > li:first-child p:nth-child(5) {
+    font-size: 11px;
+    font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
+    text-transform: none;
+    color: #666666;
+    margin: 0px;
+  }
+  #container #content #inner-content #news-articles > li:first-child p:nth-child(6) {
+    font-size: 14px;
+    font-family: "Georgia", Times New Roman, Times, serif, "Georgia", Times New Roman, Times, serif;
+    text-transform: none;
+    color: #000000;
+    line-height: 1.2em;
+    margin-top: 6px;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) {
+    margin-bottom: 8px;
+    margin-left: 10px;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) > a {
+    font-family: georgia, "times new roman", times, serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #004276;
+    text-decoration: none;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) > a a:visited,
+  #container #content #inner-content #news-articles > li:not(:first-child) > a:hover {
+    text-decoration: underline;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(2) {
+    font-size: 10px;
+    font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
+    text-transform: none;
+    color: #808080;
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(4),
+  #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(5) {
+    display: none;
+  }
+  #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(6) {
+    font-size: 14px;
+    font-family: "Georgia", Times New Roman, Times, serif, "Georgia", Times New Roman, Times, serif;
+    text-transform: none;
+    color: #000000;
+    line-height: 1.2em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 /*
 DESKTOP

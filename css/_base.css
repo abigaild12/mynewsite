@@ -220,8 +220,8 @@ and will be used across all viewports.
   font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
   text-transform: none;
   color: #808080;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(4),
 #container #content #inner-content #news-articles > li:not(:first-child) p:nth-child(5) {
