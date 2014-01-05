@@ -622,6 +622,9 @@ you can add resource intensive styles.
   #container {
     width: 62.9%%;
   }
+  #container button {
+    margin-left: 84%;
+  }
   #container #content {
     margin: auto;
     width: 62.9%%;
@@ -862,6 +865,9 @@ you can add resource intensive styles.
   ******************************************************************/
   #container {
     width: 100%;
+  }
+  #container button {
+    margin-left: 50%;
   }
   #container #content {
     margin: auto;
