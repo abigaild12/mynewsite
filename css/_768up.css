@@ -114,12 +114,11 @@ come into play. Have fun!
 
 ******************************************************************/
 #container {
-  width: 62.9%%;
+  width: 100%;
 }
 #container #content {
   margin: auto;
-  width: 62.9%%;
-  margin-top: 14px;
+  width: auto;
 }
 #container #content .header,
 #container #content .footer {
@@ -128,7 +127,7 @@ come into play. Have fun!
 #container #content #inner-content {
   font-family: georgia, "times new roman", times, serif;
   margin: auto;
-  width: 0px;
+  width: auto;
   border: none;
 }
 #container #content #inner-content #news-articles {
@@ -182,6 +181,7 @@ come into play. Have fun!
   margin-left: 258px;
   margin-top: 0px;
   margin-bottom: 3px;
+  display: block;
 }
 #container #content #inner-content #news-articles > li:first-child p:nth-child(5) {
   font-size: 11px;
@@ -189,6 +189,7 @@ come into play. Have fun!
   text-transform: none;
   color: #666666;
   margin: 0px;
+  display: block;
 }
 #container #content #inner-content #news-articles > li:first-child p:nth-child(6) {
   font-size: 14px;

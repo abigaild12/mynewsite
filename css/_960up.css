@@ -115,16 +115,18 @@ be seen on the Desktop.
 }
 #container button {
   margin: auto;
+  position: relative;
+  left: 50%;
 }
 #container #content {
   margin: auto;
-  width: 972px;
-  margin-top: 14px;
+  width: auto;
 }
 #container #content .header {
   display: block;
   background-image: url(../images/NYTD-banner.jpg);
   background-repeat: no-repeat;
+  margin: auto;
   height: 120px;
   width: 972px;
 }
@@ -185,6 +187,7 @@ be seen on the Desktop.
   margin-left: 258px;
   margin-top: 0px;
   margin-bottom: 3px;
+  display: block;
 }
 #container #content #inner-content #news-articles > li:first-child p:nth-child(5) {
   font-size: 11px;
@@ -192,6 +195,7 @@ be seen on the Desktop.
   text-transform: none;
   color: #666666;
   margin: 0px;
+  display: block;
 }
 #container #content #inner-content #news-articles > li:first-child p:nth-child(6) {
   font-size: 14px;

@@ -108,12 +108,11 @@ Stylesheet: 320px and Up Stylesheet
 
 This stylesheet is loaded Iphone devices.
 ******************************************************************/#container {
-  width: 25.3%;
+  width: 100%;
 }
 #container #content {
   margin: auto;
-  width: 25.3%;
-  margin-top: 14px;
+  width: auto;
 }
 #container #content .header,
 #container #content .footer {
@@ -122,11 +121,11 @@ This stylesheet is loaded Iphone devices.
 #container #content #inner-content {
   font-family: georgia, "times new roman", times, serif;
   margin: auto;
-  width: 0px;
+  width: auto;
   border: none;
 }
 #container #content #inner-content #news-articles {
-  width: 406px;
+  width: auto;
   list-style-type: none;
   padding: 0px;
   margin-top: 18px;
@@ -165,20 +164,10 @@ This stylesheet is loaded Iphone devices.
   margin-bottom: 8px;
 }
 #container #content #inner-content #news-articles > li:first-child p:nth-child(4) {
-  font-size: 9px;
-  font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
-  text-transform: none;
-  color: #909090;
-  margin-left: 258px;
-  margin-top: 0px;
-  margin-bottom: 3px;
+  display: none;
 }
 #container #content #inner-content #news-articles > li:first-child p:nth-child(5) {
-  font-size: 11px;
-  font-family: "Arial", Helvetica, sans-serif, "Arial", Helvetica, sans-serif;
-  text-transform: none;
-  color: #666666;
-  margin: 0px;
+  display: none;
 }
 #container #content #inner-content #news-articles > li:first-child p:nth-child(6) {
   font-size: 14px;
