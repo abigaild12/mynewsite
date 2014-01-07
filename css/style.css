@@ -128,13 +128,6 @@ and will be used across all viewports.
   width: 972px;
   margin-top: 14px;
 }
-#container #content .header {
-  display: block;
-  background-image: url(../images/NYTD-banner.jpg);
-  background-repeat: no-repeat;
-  height: 120px;
-  width: 972px;
-}
 #container #content #inner-content {
   font-family: georgia, "times new roman", times, serif;
   margin: auto;
@@ -258,11 +251,8 @@ This is for Iphone devices.
   }
   #container #content {
     margin: auto;
-    width: auto;
-  }
-  #container #content .header,
-  #container #content .footer {
-    display: none;
+    max-width: 480px;
+    width: 100%;
   }
   #container #content #inner-content {
     font-family: georgia, "times new roman", times, serif;
@@ -524,15 +514,8 @@ you can add resource intensive styles.
   }
   #container #content {
     margin: auto;
-    width: auto;
-  }
-  #container #content .header {
-    display: block;
-    background-image: url(../images/NYTD-banner.jpg);
-    background-repeat: no-repeat;
-    margin: auto;
-    height: 120px;
-    width: 972px;
+    max-width: 960px;
+    width: 100%;
   }
   #container #content #inner-content {
     font-family: georgia, "times new roman", times, serif;
