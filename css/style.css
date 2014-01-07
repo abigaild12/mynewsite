@@ -374,10 +374,6 @@ you can add resource intensive styles.
     margin: auto;
     width: auto;
   }
-  #container #content .header,
-  #container #content .footer {
-    display: none;
-  }
   #container #content #inner-content {
     font-family: georgia, "times new roman", times, serif;
     margin: auto;
